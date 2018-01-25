@@ -1,6 +1,6 @@
 <?php
 
-namespace Shuramita\Property\Controllers;
+namespace Shuramita\Property;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
