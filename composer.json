@@ -1,0 +1,12 @@
+{
+  "name": "shuramita/property",
+  "description": "Property management",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Tam Nguyen",
+      "email": "minhtamtt@gmail.com"
+    }
+  ],
+  "require": {}
+}
