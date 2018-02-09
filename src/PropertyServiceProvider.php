@@ -2,6 +2,7 @@
 
 namespace Shuramita\Property;
 
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
 
@@ -15,6 +16,9 @@ class PropertyServiceProvider extends ServiceProvider
     public function boot(Router $router)
     {
         $this->loadRoutesFrom(__DIR__.'/routes.php');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'property');
+        $loader = AliasLoader::getInstance();
+        $loader->alias('PropertyHelper', '\Shuramita\Property\Helper');
     }
 
     /**
