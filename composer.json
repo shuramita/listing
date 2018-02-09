@@ -15,5 +15,5 @@
         "psr-4": {
             "Shuramita\\Property\\": "src/"
         }
-    },
+    }
 }
