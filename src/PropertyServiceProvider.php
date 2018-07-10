@@ -2,6 +2,7 @@
 
 namespace Shuramita\Property;
 
+use Illuminate\Support\Facades\View;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
@@ -19,6 +20,9 @@ class PropertyServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/views', 'property');
         $loader = AliasLoader::getInstance();
         $loader->alias('PropertyHelper', '\Shuramita\Property\Helper');
+        View::composer(
+            ['property::partials.create-address'], '\Shuramita\Property\Models\StaticData@all_provinces'
+        );
     }
 
     /**

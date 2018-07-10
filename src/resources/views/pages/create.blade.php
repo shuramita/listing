@@ -3,7 +3,11 @@
 @section('content')
     <section name="module" js="property" css="property">
         <div class="container">
-            @include('property::partials.create-address')
+            <div class="">
+                @include('property::partials.create-title')
+                @include('property::partials.create-type')
+                @include('property::partials.create-address')
+            </div>
         </div>
     </section>
 
